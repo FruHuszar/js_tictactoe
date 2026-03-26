@@ -1,0 +1,67 @@
+:root {
+    --bg: #f7f4f4;
+    --betu: #1f1d1d;
+    --hover: #6d1515;
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--betu);
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    margin: 10px;
+    border-radius: var(--radius);
+}
+
+.tarolo {
+    background-color: color-mix(in srgb, var(--betu), transparent 95%);
+}
+
+.kedvencek {
+    background-color: color-mix(in srgb, var(--hover), transparent 20%);
+}
+
+img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.kartya {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    position: relative;
+    border: 1px solid var(--betu);
+    border-radius: var(--radius);
+}
+
+button {
+    background-color: var(--bg);
+    border-radius: 100%;
+    padding: 3px 5px;
+    border: 1px solid var(--betu);
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    transition: 0.3s;
+}
+
+
+button:hover {
+    cursor: pointer;
+    color: var(--hover);
+    border: 1px solid var(--hover);
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px color-mix(in srgb, var(--hover), transparent 60%);
+}
