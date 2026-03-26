@@ -1,21 +1,13 @@
-import { KUTYALISTA } from "./adat.js";
-import Kutyak from "./Kutyak.js";
-import Kutya from "./KUTYA.js";
+import Elem from "./Elem.js";
+import Tabla from "./Tabla.js";
 
+const szuloELem = document.querySelector(".tarolo");
 
-const szuloELem = document.querySelector(".tarolo")
-const kedvencELem = document.querySelector(".kedvencek")
+let TABLA = [" "," "," ","X"," ","O"," "," ","X"]
+new Tabla(TABLA, szuloELem);
 
-//-----------Második óra-------------
-
-new Kutyak(KUTYALISTA, szuloELem);
-
-/* Kiválasztjuk a kedvenc kutyákat és listába rakjuk őket */
-const KEDVENCLISTA=[]
-/* Itt kell tudnunk mire kattintottunk */
-window.addEventListener("kedvencekhez",(event)=>{
+window.addEventListener("katt", (event)=>{
     console.log(event.detail);
-    KEDVENCLISTA.push(event.detail);
-    let aktualisIndex = KEDVENCLISTA.length-1
-    const k1 = new Kutya(KEDVENCLISTA[aktualisIndex], kedvencELem);
+    TABLA[event.detail]="X";
+    new Tabla(TABLA, szuloELem);
 })

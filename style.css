@@ -24,25 +24,24 @@ article {
 }
 
 .tarolo {
-    background-color: color-mix(in srgb, var(--betu), transparent 95%);
+    display: grid;    
+    grid-template-columns: repeat(3,1fr);
 }
 
-.kedvencek {
-    background-color: color-mix(in srgb, var(--hover), transparent 20%);
+.box {
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid black;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
-img {
-    width: 100%;
-    border-radius: var(--radius);
-}
-
-.kartya {
-    width: 300px;
-    margin: 20px;
-    padding: 10px;
-    position: relative;
-    border: 1px solid var(--betu);
-    border-radius: var(--radius);
+.box p {
+    font-size: calc(20px + 10vw);
+    text-align: center;
+    align-self: center;
 }
 
 button {
